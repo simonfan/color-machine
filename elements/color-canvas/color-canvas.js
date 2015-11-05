@@ -37,6 +37,20 @@
         notify: true
       },
 
+      zeroColor: {
+        type: String,
+        notify: true,
+        value: 'black',
+        observer: '_handleValueChange'
+      },
+
+      oneColor: {
+        type: String,
+        notify: true,
+        value: 'white',
+        observer: '_handleValueChange'
+      },
+
       colorMapping: {
         type: Object,
         notify: true,
@@ -58,7 +72,10 @@
 
       this.clear();
 
-      var colorMapping = this.get('colorMapping');
+      var colorMapping = {
+        '0': this.get('zeroColor'),
+        '1': this.get('oneColor')
+      };
 
       // draw for each line
       lines.forEach(function (lineContents, lineIndex) {
