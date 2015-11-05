@@ -61,11 +61,11 @@
       }
     },
 
-    _handleValueChange: function (value, old) {
+    _handleValueChange: function () {
 
       var splitRegExp = new RegExp('.{1,' + this.get('columns') + '}', 'g');
 
-      var lines = value.match(splitRegExp) || [];
+      var lines = this.get('value').match(splitRegExp) || [];
 
       var charWidth  = this.get('charWidth');
       var charHeight = this.get('charHeight');
