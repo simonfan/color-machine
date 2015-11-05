@@ -26,8 +26,8 @@ window.addEventListener('WebComponentsReady', function () {
   }
 
   // SET VALUES ONTO SCOPE
-  machine.set('columns', 60);
-  machine.set('rows', 15);
+  machine.set('columns', 30);
+  machine.set('rows', 12);
   textEditor.editor.setValue(Array(60 * 15 + 1).join("0"));
 
   setTimeout(function () {
