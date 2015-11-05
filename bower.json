@@ -1,0 +1,24 @@
+{
+  "name": "o-universo-das-maquinas",
+  "version": "0.0.0",
+  "homepage": "https://github.com/simonfan/hacking",
+  "authors": [
+    "Simon <simonxd@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ace-builds": "https://github.com/ajaxorg/ace-builds.git#~1.2.2",
+    "paper": "~0.9.25",
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.14",
+    "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.11",
+    "paper-radio-group": "PolymerElements/paper-radio-group#~1.0.6",
+    "polymer": "~1.2.1"
+  }
+}

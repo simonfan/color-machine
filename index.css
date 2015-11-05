@@ -1,0 +1,36 @@
+body {
+  margin: 0 0;
+
+  font-family: monaco, monospace;
+}
+
+#workspace {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 600px;
+  height: 500px;
+
+  border: 40px solid #ccc;
+}
+
+#workspace #controls {
+  position: absolute;
+
+  font-size: 12px;
+
+  top: 50%;
+  right: -10px;
+
+  transform: translate(100%, -50%);
+}
+
+#text-editor {
+  position: absolute;
+  height: 100%;
+  transition: opacity 0.4s ease;
+}

@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>color machine</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <!-- our elements -->
+  <link rel="import" href="elements/ace-editor/ace-editor.html">
+  <link rel="import" href="elements/color-canvas/color-canvas.html">
+
+  <!-- polymer paper elements -->
+  <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+</head>
+<body>
+
+  <template id="m" is="dom-bind">
+    <div id="workspace">
+
+      <div id="controls">
+
+
+        <label>
+          <input type="checkbox" checked="{{ showEditor::change }}">
+          editor
+        </label>
+      </div>
+
+      <color-canvas
+        id="canvas"
+        value="{{ value }}"
+        columns="{{ columns }}"
+        char-width="{{ charWidth }}"
+        char-height="{{ charHeight }}"
+        height="{{ editorHeight }}"
+        width="{{ editorWidth }}">
+      </color-canvas>
+
+      <ace-editor
+        id="text-editor"
+        value="{{ value }}"
+        font-size="{{ fontSize }}"
+        columns="{{ columns }}"
+        rows="{{ rows }}"
+        editor-height="{{ editorHeight }}"
+        editor-width="{{ editorWidth }}"
+        char-width="{{ charWidth }}"
+        char-height="{{ charHeight }}"
+        hidden$="{{ !showEditor }}">
+
+      </ace-editor>
+    </div>
+
+    <section id="control" hidden$="{{ !showEditor }}">
+
+      <input value="{{ columns::input }}" placeholder="columns">
+      <input value="{{ rows::input }}" placeholder="rows">
+
+    </section>
+
+
+
+  </template>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
