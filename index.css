@@ -29,6 +29,35 @@ body {
   transform: translate(100%, -50%);
 }
 
+#workspace #foot {
+  position: absolute;
+
+  width: 100px;
+  height: 80px;
+
+  left: 50%;
+  bottom: 0;
+
+  background-color: #ccc;
+
+  transform: translate(-50%, 100%);
+}
+
+#workspace #foot-foot {
+  position: absolute;
+
+  width: 200px;
+  height: 20px;
+
+  left: 50%;
+  bottom: -80px;
+
+  background-color: #ccc;
+
+  transform: translate(-50%, 100%);
+}
+
+
 #text-editor {
   position: absolute;
   height: 100%;
